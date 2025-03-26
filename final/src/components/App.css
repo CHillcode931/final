@@ -1,3 +1,10 @@
 .card{
-  background-color:blue
+  border:3px dotted double gray;
+  flex-basis: 22%;
+  padding:10px;
+  margin-bottom: 20px;
+
+  font-size: 20px;
+  font-weight: 1000;
+  
 }

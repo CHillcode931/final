@@ -10,3 +10,12 @@ export const getProductList=async ()=>{
         console.error(error)
     }
 }
+export const getDetails= async ()=>{
+    try{ fetch("https://fakestoreapi.com/products/{id}")
+    const data=await response.json()
+    console.log(data)
+    return data;}
+catch(error){
+        console.error(error)
+    }
+}

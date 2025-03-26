@@ -4,7 +4,7 @@
         <div><button id="back">Back</button>
         <button id='cart'> cart</button>
         <button id='home'>home</button></div>
-        
+        <input type="text" id='search' placeholder="search" />
         </>
     )
 }

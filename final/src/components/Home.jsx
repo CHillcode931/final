@@ -13,7 +13,7 @@ export const    Home= () => {
   return (
     <div  style={{display: 'flex', flexWrap: 'wrap'}}>
         {productList.map((item) =>(
-            <div  key={item.id}>
+            <div className="card"  key={item.id}>
                 <img src={item.image} alt="" height={300} />
                 <div>{item.title}</div>
                 <p>{item.description}</p>
