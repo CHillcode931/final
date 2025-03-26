@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getProductList } from "./utils/api";
-
+import './App.css'
 export const    Home= () => {
     const [productList, setProductList] = useState([])
 
@@ -11,9 +11,9 @@ export const    Home= () => {
     }, []);
 
   return (
-    <div style={{display: 'flex', flexWrap: 'wrap'}}>
+    <div  style={{display: 'flex', flexWrap: 'wrap'}}>
         {productList.map((item) =>(
-            <div key={item.id}>
+            <div  key={item.id}>
                 <img src={item.image} alt="" height={300} />
                 <div>{item.title}</div>
                 <p>{item.description}</p>
