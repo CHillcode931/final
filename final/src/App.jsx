@@ -1,15 +1,18 @@
 import { useState, useEffect } from 'react'
 import { getProductList } from './components/utils/api'
 import { Home } from './components/home'
-import {NavBar} from './components/NavBar'
 
+import {Details} from'./components/Details'
+import {Nav} from'./components/Nav'
 const App= ()=> {
   
 
   return (
     <>
-     <NavBar/>
+    <Nav/>
+     
      <Home/>
+
       </>
   )
 }
