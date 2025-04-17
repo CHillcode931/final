@@ -19,6 +19,7 @@ export const Details = () => {
     });
   }, [id]);
 
+  
   return (
     <>
       <button onClick={() => navigate(-1)}>
