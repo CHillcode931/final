@@ -38,8 +38,7 @@ export const Home = () => {
 
   return (
     <>
-    <div>
-      <div className="sorting">
+      <div>
         <p>Sort by category:</p>
         <select
           value={selectedCategory}
@@ -51,25 +50,31 @@ export const Home = () => {
           <option value="women's clothing">Women's Clothing</option>
           <option value="jewelery">Jewelery</option>
         </select>
-      </div>
 
-      <div> 
-        <p>Sort by price:</p>
-        <select value={sortOrder} onChange={(e) => setSortOrder(e.target.value)}>
-          <option value="none">None</option>
-          <option value="asc">Price: Low to High</option>
-          <option value="desc">Price: High to Low</option>
-        </select>
-      </div>
+        <div id="price">
+          <p>Sort by price:</p>
+          <select
+            value={sortOrder}
+            onChange={(e) => setSortOrder(e.target.value)}
+          >
+            <option value="none">None</option>
+            <option value="asc">Price: Low to High</option>
+            <option value="desc">Price: High to Low</option>
+          </select>
+        </div>
       </div>
 
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         {sortedItems.map((item) => (
-          <Link to={`details/${item.id}`} key={item.id}>
-            <div className="card">
-              <img src={item.image} alt={`Image of ${item.title}`} height={300} />
+          // <Link to={`details/${item.id}`} key={item.id}>
+            <div className="card" key= {item.id}>
+              <img
+                src={item.image}
+                alt={`Image of ${item.title}`}
+                height={300}
+              />
               <div>
-                <h3>{item.title}</h3>
+                <Link to={`details/${item.id}`}><h3>{item.title}</h3></Link>
               </div>
               <p>Rating: {item.rating?.rate || "No rating"}</p>
               <div>${item.price}</div>
@@ -82,7 +87,7 @@ export const Home = () => {
                 </button>
               </div>
             </div>
-          </Link>
+          // </Link>
         ))}
       </div>
     </>

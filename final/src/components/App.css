@@ -1,4 +1,11 @@
-
+#price{
+  position: absolute;
+  right:50px;
+  top:85px
+}
+#sorting{
+padding: 50px;
+}
 
 .card{
    
