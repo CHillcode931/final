@@ -11,14 +11,14 @@ export const Details = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const { removeFromCart, addToCart } = useContext(CartContext);
-
+  
   useEffect(() => {
     getDetails(id).then((data) => {
       setProductDetails(data);
       console.log("Updated Product Details:", data);
     });
   }, [id]);
-
+  
   
   return (
     <>
@@ -34,7 +34,7 @@ export const Details = () => {
             src={productDetails.image}
             alt={productDetails.title || "Product image"}
             style={{ maxWidth: "300px" }}
-          />
+            />
         </p>
         <p>${productDetails.price || "Price not available"}</p>
         <p>{productDetails.description || "No description available"}</p>
@@ -46,7 +46,7 @@ export const Details = () => {
       </div>
 
       <div>
-        <button onClick={() => addToCart([item.id])}>
+        <button onClick={() => addToCart({item})}>
           <FaCartPlus /> Add to Cart
         </button>
 
@@ -60,4 +60,4 @@ export const Details = () => {
       </div>
     </>
   );
-};
+}

@@ -5,7 +5,7 @@ import { FcAbout } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { SearchContext } from "../context/Search";
 import { useContext } from "react";
-
+import { FaCartArrowDown } from "react-icons/fa";
 export const Nav=()=>{
 const{searchQuery, setSearchQuery}=useContext(SearchContext)
 return(
@@ -16,7 +16,8 @@ return(
   <Link to="about"><FcAbout/></Link>
   <Link to="contact"><FaPhoneAlt/></Link>
  <Link to='cart'><FaCartShopping/></Link>
-  
+  <Link to="CheckOut"><FaCartArrowDown />
+  </Link>
   
  <input type="text" 
  placeholder="Search.."

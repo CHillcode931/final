@@ -82,7 +82,7 @@ export const Home = () => {
                 <button>
                   <CiHeart />
                 </button>
-                <button onClick={() => addToCart(item)}>
+                <button onClick={() => addToCart({item})}>
                   <FaCartPlus />
                 </button>
               </div>
