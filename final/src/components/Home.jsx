@@ -38,55 +38,58 @@ export const Home = () => {
 
   return (
     <>
-      <div>
-        <p>Sort by category:</p>
-        <select
-          value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
-        >
-          <option value="All">All</option>
-          <option value="electronics">Electronics</option>
-          <option value="men's clothing">Men's Clothing</option>
-          <option value="women's clothing">Women's Clothing</option>
-          <option value="jewelery">Jewelery</option>
-        </select>
-
-        <div id="price">
-          <p>Sort by price:</p>
+      <div id="sort-container">
+        <div id="sorting">
+          <p>
+            <strong>Sort By Category:</strong>
+          </p>
           <select
-            value={sortOrder}
-            onChange={(e) => setSortOrder(e.target.value)}
+            value={selectedCategory}
+            onChange={(e) => setSelectedCategory(e.target.value)}
           >
-            <option value="none">None</option>
-            <option value="asc">Price: Low to High</option>
-            <option value="desc">Price: High to Low</option>
+            <option value="All">All</option>
+            <option value="electronics">Electronics</option>
+            <option value="men's clothing">Men's Clothing</option>
+            <option value="women's clothing">Women's Clothing</option>
+            <option value="jewelery">Jewelery</option>
           </select>
+
+          <div id="price">
+            <p>
+              <strong>Sort by Price:</strong>
+            </p>
+            <select
+              value={sortOrder}
+              onChange={(e) => setSortOrder(e.target.value)}
+            >
+              <option value="none">None</option>
+              <option value="asc">Price: Low to High</option>
+              <option value="desc">Price: High to Low</option>
+            </select>
+          </div>
         </div>
       </div>
-
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         {sortedItems.map((item) => (
           // <Link to={`details/${item.id}`} key={item.id}>
-            <div className="card" key= {item.id}>
-              <img
-                src={item.image}
-                alt={`Image of ${item.title}`}
-                height={300}
-              />
-              <div>
-                <Link to={`details/${item.id}`}><h3>{item.title}</h3></Link>
-              </div>
-              <p>Rating: {item.rating?.rate || "No rating"}</p>
-              <div>${item.price}</div>
-              <div>
-                <button>
-                  <CiHeart />
-                </button>
-                <button onClick={() => addToCart({item})}>
-                  <FaCartPlus />
-                </button>
-              </div>
+          <div className="card" key={item.id}>
+            <img src={item.image} alt={`Image of ${item.title}`} height={300} />
+            <div>
+              <Link to={`details/${item.id}`}>
+                <h3>{item.title}</h3>
+              </Link>
             </div>
+            <p>Rating: {item.rating?.rate || "No rating"}</p>
+            <div>${item.price}</div>
+            <div>
+              <button>
+                <CiHeart />
+              </button>
+              <button onClick={() => addToCart({ item })}>
+                <FaCartPlus />
+              </button>
+            </div>
+          </div>
           // </Link>
         ))}
       </div>

@@ -9,6 +9,7 @@ export const CheckoutPage = () => {
     address: "",
     city: "",
     zipCode: "",
+    state:""
   });
 
   const [paymentMethod, setPaymentMethod] = useState("creditCard");
@@ -69,6 +70,13 @@ export const CheckoutPage = () => {
             value={shippingInfo.city}
             onChange={handleInputChange}
           />
+          <input
+          type="text"
+          name="state"
+          placeholder="State"
+          value={shippingInfo.state}
+          onChange={handleInputChange}/>
+          
           <input
             type="text"
             name="zipCode"

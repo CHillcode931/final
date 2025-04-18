@@ -1,12 +1,13 @@
-#price{
-  position: absolute;
-  right:50px;
-  top:85px
-}
-#sorting{
-padding: 50px;
-}
 
+ #sort-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+ }
+#sorting{
+  padding: 50px;
+}
 .card{
    
   flex-basis: 22%;
