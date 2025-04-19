@@ -8,6 +8,7 @@ import {About}from './components/About'
 import {Contact}from './components/Contact'
 import { Cart } from './components/CartPage'
 import { CheckoutPage } from './components/CeckOut'
+import { WishList } from './components/WishPage'
 const App= ()=> {
   
 
@@ -23,7 +24,8 @@ const App= ()=> {
           <Route element={<Details />} path="details/:id" />
           <Route element={<About/>} path="About"/>
           <Route element= {<Contact/>} path= "Contact"/>
-          <Route element={<CheckoutPage/>}path="Checkout"/>      
+          <Route element={<CheckoutPage/>}path="Checkout"/>  
+          < Route element={<WishList/>} path="WishList"/>   
       </Routes>
      
      

@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 import { SearchContext } from "../context/Search";
 import { useContext } from "react";
 import { FaCartArrowDown } from "react-icons/fa";
+import { CiHeart } from "react-icons/ci";
+
+
 export const Nav=()=>{
 const{searchQuery, setSearchQuery}=useContext(SearchContext)
 return(
@@ -18,7 +21,7 @@ return(
  <Link to='cart'><FaCartShopping/></Link>
   <Link to="CheckOut"><FaCartArrowDown />
   </Link>
-  
+  <Link to="WishList"><CiHeart/></Link>
  <input type="text" 
  placeholder="Search.."
  value={searchQuery}

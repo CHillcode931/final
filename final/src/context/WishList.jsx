@@ -22,7 +22,9 @@ export const WishListProvider = ({ children }) => {
   const removeFromWishList = (item) => {
     setWishItems(wishItems.filter((wishItem) => wishItem.id !== item.id));
   };
-
+const clearWishList=()=>{
+    setWishItems([])
+};
   useEffect(() => {
     try {
       localStorage.setItem("wishItems", JSON.stringify(wishItems));
@@ -37,6 +39,7 @@ export const WishListProvider = ({ children }) => {
         wishItems,
         addToWishList,
         removeFromWishList,
+        clearWishList
       }}
     >
       {children}
