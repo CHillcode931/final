@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../context/Cart.jsx";
 import { SearchContext } from "../context/Search.jsx";
 import { WishListToggleButton } from "./ToggleButton.jsx";
+import { FaHeart } from "react-icons/fa6";
+import { CiHeart } from "react-icons/ci";
+
 
 export const Home = () => {
   const { searchQuery } = useContext(SearchContext);
