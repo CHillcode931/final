@@ -1,4 +1,4 @@
-import { useContext,useState } from "react";
+import { useContext } from "react";
 import { CartContext } from "../context/Cart.jsx";
 import { MdRemoveShoppingCart } from "react-icons/md";
 import { IoTrashBin } from "react-icons/io5";
