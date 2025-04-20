@@ -8,29 +8,40 @@ import { useContext } from "react";
 import { FaCartArrowDown } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 
+export const Nav = () => {
+  const { searchQuery, setSearchQuery } = useContext(SearchContext);
+  return (
+    <>
+      <div id="nav">
+        <div className="topnav">
+          <Link to="/">
+            <FaHome />
+          </Link>
+          <Link to="about">
+            <FcAbout />
+          </Link>
+          <Link to="contact">
+            <FaPhoneAlt />
+          </Link>
+          <Link to="cart">
+            <FaCartShopping />
+          </Link>
+          <Link to="CheckOut">
+            <FaCartArrowDown />
+          </Link>
+          <Link to="WishList">
+            <CiHeart />
+          </Link>
+          <input
+            type="text"
+            placeholder="Search.."
+            value={searchQuery}
+            onChange={(event) => setSearchQuery(event.target.value)}
+          />
 
-export const Nav=()=>{
-const{searchQuery, setSearchQuery}=useContext(SearchContext)
-return(
-<>
-<div id="nav">
-    <div className="topnav" >
-  <Link   to="/"><FaHome/></Link>
-  <Link to="about"><FcAbout/></Link>
-  <Link to="contact"><FaPhoneAlt/></Link>
- <Link to='cart'><FaCartShopping/></Link>
-  <Link to="CheckOut"><FaCartArrowDown />
-  </Link>
-  <Link to="WishList"><CiHeart/></Link>
- <input type="text" 
- placeholder="Search.."
- value={searchQuery}
- onChange={(event)=> setSearchQuery(event.target.value)}/>
- 
- <h1>Far Out Products</h1>
-</div>
-</div>
-</>
-)
-
-}
+          <h1>Far Out Products</h1>
+        </div>
+      </div>
+    </>
+  );
+};

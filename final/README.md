@@ -1,5 +1,5 @@
 # Final
-Title
+Title:
 Far out products App
 <!-- Description -->
 The program allows you to select from different products and manage a cart. And view details such as price , rating, and number of sales.

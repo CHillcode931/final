@@ -8,12 +8,12 @@ import { WishListProvider } from "./context/WishList.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-        <WishListProvider>
-    <CartProvider>
-      <SearchProvider>
+    <WishListProvider>
+      <CartProvider>
+        <SearchProvider>
           <App />
-      </SearchProvider>
-    </CartProvider>
-        </WishListProvider>
+        </SearchProvider>
+      </CartProvider>
+    </WishListProvider>
   </StrictMode>
 );

@@ -1,4 +1,3 @@
-
 import { getDetails } from "./utils/api";
 import { FaCartPlus } from "react-icons/fa";
 import { WishListToggleButton } from "./ToggleButton";
@@ -48,13 +47,13 @@ export const Details = () => {
       </div>
 
       <div>
-        <button onClick={() => addToCart({item:productDetails})}>
+        <button onClick={() => addToCart({ item: productDetails })}>
           <FaCartPlus /> Add to Cart
         </button>
 
         <WishListToggleButton item={productDetails} />
 
-        <button onClick={() => removeFromCart({item:productDetails})}>
+        <button onClick={() => removeFromCart({ item: productDetails })}>
           <MdRemoveShoppingCart /> Remove from Cart
         </button>
       </div>

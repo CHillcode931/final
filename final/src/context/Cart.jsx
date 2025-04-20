@@ -12,9 +12,9 @@ export const CartProvider = ({ children }) => {
       return [];
     }
   });
-//   functions to remove or add items in cart 
+  //   functions to remove or add items in cart
 
-  const addToCart = ({item}) => {
+  const addToCart = ({ item }) => {
     const isItemInCart = cartItems.find((cartItem) => cartItem.id === item.id);
 
     if (isItemInCart) {
@@ -30,7 +30,7 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  const removeFromCart = ({item}) => {
+  const removeFromCart = ({ item }) => {
     const isItemInCart = cartItems.find((cartItem) => cartItem.id === item.id);
 
     if (isItemInCart.quantity === 1) {
