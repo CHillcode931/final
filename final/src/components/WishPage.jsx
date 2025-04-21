@@ -2,13 +2,14 @@ import { useContext } from "react";
 import { WishListContext } from "../context/WishList";
 import { Link, useNavigate } from "react-router-dom";
 import { AiFillStar } from "react-icons/ai";
-import{Popup} from"reactjs-popup";
-import 'reactjs-popup/dist/index.css';
+import { CartContext } from "../context/Cart";
+import { FaCartPlus } from "react-icons/fa";
+
 export const WishList = () => {
   const { wishItems, removeFromWishList, clearWishList } =
     useContext(WishListContext);
   const navigate = useNavigate();
-
+const{addToCart}= useContext(CartContext)
   return (
     <>
       <div>
@@ -34,6 +35,7 @@ export const WishList = () => {
             </p>
             <p>${item.price}</p>
             <button onClick={() => removeFromWishList(item)}>Remove</button>
+            <button onClick={()=>addToCart({item})}><FaCartPlus/></button>
           </div>
         ))}
       </div>
