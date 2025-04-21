@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { CartContext } from "../context/Cart";
-
+import{Link} from "react-router-dom"
 export const CheckoutPage = () => {
   const { cartItems, getCartTotal, clearCart } = useContext(CartContext);
 
@@ -26,6 +26,7 @@ export const CheckoutPage = () => {
 
   return (
     <div>
+      <Link to={-1}>Continue Shopping</Link>
       <h1>Checkout</h1>
 
       <section>

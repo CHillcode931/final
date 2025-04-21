@@ -37,18 +37,24 @@
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+transition-property: transform;
+transition-duration: 0.3s;
+transition-timing-function:  ease;
+transition-delay: 0s;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
   background-color: #ddd;
   color: black;
+  transform: translateY(-10px)
 }
 
 /* Style the "active" element to highlight the current page */
 .topnav a.active {
   background-color: #2196F3;
   color: white;
+  
 }
 
 /* Style the search box inside the navigation bar */
